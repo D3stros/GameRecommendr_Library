@@ -20,7 +20,7 @@
 	var shooter = {
 		shooterGames: [
 			'CounterStrike',
-			'Rainbow Six',
+			'Rainbow Six Siege',
 			'Playerunknowns Battlegrounds'
 		]
 	};
