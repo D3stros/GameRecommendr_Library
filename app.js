@@ -1,2 +1,2 @@
-var g = G$('Strategie');
-console.log(g);
+var g = G$('Shooter');
+g.gameRecommend();
