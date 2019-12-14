@@ -30,19 +30,34 @@
 	};
 
 	GameRecommendr.prototype = {
+		HTMLgameRecommend: function(selector) {
+			if (!$) {
+				throw 'Method needs jQuery!';
+			}
+
+			if (!selector) {
+				throw 'jQuery selector is needed here';
+			}
+
+			msg = this.gameRecommend();
+
+			$(selector).html(msg);
+
+			return this;
+		},
 		gameGenre: function() {
 			return this.gameGenre;
 		},
 		gameRecommend: function(gameGenre) {
 			if (this.gameGenre === 'Strategy') {
 				var game = randomGame(strategy.strategyGames);
-				console.log(game);
+				return game;
 			} else if (this.gameGenre === 'Shooter') {
 				var game = randomGame(shooter.shooterGames);
-				console.log(game);
+				return game;
 			} else if (this.gameGenre === 'RPG') {
 				var game = randomGame(rpg.rpgGames);
-				console.log(game);
+				return game;
 			}
 		}
 	};
